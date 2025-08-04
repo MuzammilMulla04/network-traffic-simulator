@@ -160,12 +160,14 @@ The frontend will run on `http://localhost:3000`
 -   Queue sizes are tracked and displayed in real-time
 
 ### Simulation Loop
-
 1. Generate new packets at each node
 2. Process queued packets at each node
 3. Check link capacities before forwarding
 4. Update statistics and send to frontend
 5. Repeat every second
+   
+<img width="1920" height="1030" alt="image" src="https://github.com/user-attachments/assets/4c5b1e2a-5d55-43a1-a9a9-313512985002" />
+<img width="1920" height="1030" alt="image" src="https://github.com/user-attachments/assets/03f9efd2-6e0c-4e7f-96e7-0a92f5f5629e" />
 
 ## Deployment
 
