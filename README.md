@@ -1,101 +1,115 @@
-# Network Traffic Simulator
+# 🌐 Network Traffic Simulator
 
-A real-time network traffic simulator for telecommunications networks built with Node.js/Express backend and React frontend.
+> **A real-time telecommunications network traffic simulator built for DigiPlus IT technical assessment**
 
-## Overview
+[![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)](https://expressjs.com/)
+[![Socket.io](https://img.shields.io/badge/Socket.io-black?style=for-the-badge&logo=socket.io&badgeColor=010101)](https://socket.io/)
 
-This application simulates network traffic in a telecommunications network with 5 interconnected nodes (A, B, C, D, E). It provides real-time visualization of:
+## 🚀 Live Demo
 
-- Network topology with color-coded link utilization
-- Node statistics (traffic generation rates, queue sizes)
-- Link statistics (current load, capacity utilization)
-- Interactive controls for traffic rate adjustment
+- **Backend API**: `https://your-backend-url.herokuapp.com`
+- **Frontend App**: `https://your-frontend-url.netlify.app`
 
-## Features
+## 📋 Overview
 
-- **Real-time Simulation**: Live updates using WebSocket connections
-- **Visual Network Topology**: Graphical representation of network nodes and links
-- **Traffic Control**: Adjust packet generation rates for each node
-- **Queue Management**: Packet queuing when links reach capacity
-- **Shortest Path Routing**: Implements Dijkstra's algorithm for packet routing
-- **Congestion Handling**: Link capacity checking and packet queuing
-- **Responsive Design**: Works on desktop and mobile devices
+This application simulates network traffic in a telecommunications network with 5 interconnected nodes (A, B, C, D, E). It provides real-time visualization of packet flow, congestion management, and network performance metrics.
 
-## Technology Stack
+### ✨ Key Features
 
-**Backend:**
-- Node.js with Express
-- Socket.IO for real-time communication
-- In-memory data structures for state management
+- 🔄 **Real-time Packet Simulation** with WebSocket updates
+- 🎯 **Interactive Network Topology** with visual feedback
+- 📊 **Live Statistics Dashboard** showing network metrics
+- 🚦 **Traffic Control Interface** with adjustable generation rates
+- 🎨 **Color-coded Congestion Visualization** (Green/Orange/Red)
+- 🔀 **Shortest Path Routing** using Dijkstra's algorithm
+- 📱 **Responsive Design** for desktop and mobile
+- ☁️ **Cloud-ready Deployment** configuration
 
-**Frontend:**
-- React 18
-- Socket.IO client
-- CSS Grid and Flexbox for responsive layout
-
-## Network Topology
-
-The simulator uses a predefined network topology with 5 nodes:
+## 🏗️ Architecture
 
 ```
-    A -------- B
-    |          |
-    |          |
-    C -------- D
-     \        /
-      \      /
-        E
+Frontend (React)     Backend (Node.js/Express)     Algorithm Engine
+     |                        |                           |
+[Network Topology] ←→ [WebSocket Server] ←→ [Packet Simulator]
+[Statistics View]     [REST API]              [Queue Manager]
+[Traffic Controls]    [CORS Enabled]          [Path Finder]
 ```
 
-**Link Capacities:**
-- A-B: 100 pps
-- A-C: 80 pps
-- B-D: 70 pps
-- C-D: 90 pps
-- C-E: 110 pps
-- D-E: 60 pps
+## 🌐 Network Topology
 
-## Installation and Setup
+The simulator uses a predefined 5-node network topology:
 
-### Prerequisites
-- Node.js (v14 or higher)
-- npm or yarn
-
-### Backend Setup
-
-1. Navigate to the backend directory:
-```cmd
-cd backend
+```
+    A(50pps) ────100──── B(30pps)
+    │                    │
+   80│                   │70
+    │                    │
+    C(40pps) ────90───── D(20pps)
+     ╲                  ╱
+    110╲                ╱60
+        ╲              ╱
+         E(60pps)
 ```
 
-2. Install dependencies:
-```cmd
-npm install
+**Link Capacities (packets/second):**
+- A-B: 100 pps | A-C: 80 pps | B-D: 70 pps
+- C-D: 90 pps | C-E: 110 pps | D-E: 60 pps
+
+## 🚀 Quick Start
+
+### Option 1: Automated Setup (Windows)
+```bash
+# Clone the repository
+git clone https://github.com/your-username/network-traffic-simulator.git
+cd network-traffic-simulator
+
+# Run automated setup
+setup.bat
+
+# Start both servers
+start-application.bat
 ```
 
-3. Start the backend server:
-```cmd
-npm start
+### Option 2: Manual Setup
+```bash
+# Install backend dependencies
+cd backend && npm install
+
+# Install frontend dependencies  
+cd ../frontend && npm install
+
+# Start backend (Terminal 1)
+cd backend && npm start
+
+# Start frontend (Terminal 2)
+cd frontend && npm start
 ```
 
-The backend will run on `http://localhost:3001`
+### 🌐 Access the Application
+- **Frontend**: http://localhost:3000
+- **Backend API**: http://localhost:3001
 
-### Frontend Setup
+## 🎮 Usage Guide
 
-1. Navigate to the frontend directory:
-```cmd
-cd frontend
-```
+### 1. Start Simulation
+Click "Start Simulation" to begin packet generation and routing
 
-2. Install dependencies:
-```cmd
-npm install
-```
+### 2. Monitor Network
+- **Green Links**: Low traffic (< 50% capacity)
+- **Orange Links**: Medium traffic (50-80% capacity) 
+- **Red Links**: High traffic (> 80% capacity)
 
-3. Start the React development server:
-```cmd
-npm start
-```
+### 3. Control Traffic
+- Adjust individual node rates using sliders
+- Use predefined patterns (Low/Medium/High Traffic)
+- Observe real-time queue changes
+
+### 4. Analyze Performance
+- Monitor node queue sizes
+- Track link utilization percentages
+- Watch network health indicator
 
 The frontend will run on `http://localhost:3000`
 
