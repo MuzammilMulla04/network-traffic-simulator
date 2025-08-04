@@ -4,20 +4,20 @@ class NetworkSimulator {
     constructor() {
         this.nodes = ['A', 'B', 'C', 'D', 'E'];
         this.links = [
-            { from: 'A', to: 'B', capacity: 100 },
-            { from: 'A', to: 'C', capacity: 80 },
-            { from: 'B', to: 'D', capacity: 70 },
-            { from: 'C', to: 'D', capacity: 90 },
-            { from: 'C', to: 'E', capacity: 110 },
-            { from: 'D', to: 'E', capacity: 60 }
+            { from: 'A', to: 'B', capacity: 45 },
+            { from: 'A', to: 'C', capacity: 35 },
+            { from: 'B', to: 'D', capacity: 30 },
+            { from: 'C', to: 'D', capacity: 40 },
+            { from: 'C', to: 'E', capacity: 50 },
+            { from: 'D', to: 'E', capacity: 25 }
         ];
 
         this.trafficRates = {
-            'A': 50,
-            'B': 30,
-            'C': 40,
+            'A': 35,
+            'B': 25,
+            'C': 30,
             'D': 20,
-            'E': 60
+            'E': 40
         };
 
         this.nodeQueues = {};
