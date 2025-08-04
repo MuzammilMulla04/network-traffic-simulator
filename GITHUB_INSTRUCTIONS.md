@@ -8,10 +8,11 @@ Your Network Traffic Simulator is fully prepared for GitHub deployment. Follow t
 
 1. **Go to GitHub**: https://github.com/new
 2. **Repository Settings**:
-   - Name: `network-traffic-simulator`
-   - Description: `Real-time telecommunications network traffic simulator - DigiPlus IT Technical Assessment`
-   - Visibility: ✅ **Public**
-   - Initialize: ❌ **DO NOT** check any initialization options (we have everything ready)
+
+    - Name: `network-traffic-simulator`
+    - Description: `Real-time telecommunications network traffic simulator - DigiPlus IT Technical Assessment`
+    - Visibility: ✅ **Public**
+    - Initialize: ❌ **DO NOT** check any initialization options (we have everything ready)
 
 3. **Click "Create repository"**
 
@@ -34,47 +35,52 @@ Your repository will be live at: `https://github.com/YOUR_USERNAME/network-traff
 ## 📦 What's Being Uploaded
 
 Your repository includes:
-- ✅ **Complete source code** (Backend + Frontend)
-- ✅ **Professional README** with badges and documentation
-- ✅ **Deployment scripts** for easy setup
-- ✅ **Configuration files** for VS Code, Git, deployment
-- ✅ **Documentation** (FEATURES.md, DEPLOYMENT.md, NEXT_STEPS.md)
+
+-   ✅ **Complete source code** (Backend + Frontend)
+-   ✅ **Professional README** with badges and documentation
+-   ✅ **Deployment scripts** for easy setup
+-   ✅ **Configuration files** for VS Code, Git, deployment
+-   ✅ **Documentation** (FEATURES.md, DEPLOYMENT.md, NEXT_STEPS.md)
 
 ## 🌐 Next Steps (Optional)
 
 ### Deploy to Cloud Platforms:
 
 1. **Backend → Heroku**:
-   ```bash
-   cd backend
-   heroku create your-app-name-backend
-   git subtree push --prefix backend heroku main
-   ```
+
+    ```bash
+    cd backend
+    heroku create your-app-name-backend
+    git subtree push --prefix backend heroku main
+    ```
 
 2. **Frontend → Netlify**:
-   - Drag & drop the `frontend/build` folder to Netlify
-   - Or connect GitHub repository for auto-deployment
+    - Drag & drop the `frontend/build` folder to Netlify
+    - Or connect GitHub repository for auto-deployment
 
 ### Update Live URLs
 
 After deployment, update the README.md with your live demo URLs:
-- Backend API: `https://your-app-backend.herokuapp.com`
-- Frontend: `https://your-app-frontend.netlify.app`
+
+-   Backend API: `https://your-app-backend.herokuapp.com`
+-   Frontend: `https://your-app-frontend.netlify.app`
 
 ## 📧 Submission
 
 Share with HR@DigiPlusIT.com:
-- **Repository URL**: `https://github.com/YOUR_USERNAME/network-traffic-simulator`
-- **Live Demo URLs** (if deployed)
-- **Your Name & Contact Information**
+
+-   **Repository URL**: `https://github.com/YOUR_USERNAME/network-traffic-simulator`
+-   **Live Demo URLs** (if deployed)
+-   **Your Name & Contact Information**
 
 ## ✅ Project Status
 
 Your Network Traffic Simulator is:
-- 🎯 **Fully Functional** - All requirements implemented
-- 📱 **Production Ready** - Professional UI and robust backend
-- 🚀 **Deployment Ready** - Configured for cloud platforms
-- 📚 **Well Documented** - Comprehensive guides and README
-- 🔧 **Easy to Run** - Automated setup scripts included
+
+-   🎯 **Fully Functional** - All requirements implemented
+-   📱 **Production Ready** - Professional UI and robust backend
+-   🚀 **Deployment Ready** - Configured for cloud platforms
+-   📚 **Well Documented** - Comprehensive guides and README
+-   🔧 **Easy to Run** - Automated setup scripts included
 
 **Congratulations! Your technical assessment project is complete and ready for submission!** 🎉

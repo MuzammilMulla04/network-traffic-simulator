@@ -9,8 +9,8 @@
 
 ## 🚀 Live Demo
 
-- **Backend API**: `https://your-backend-url.herokuapp.com`
-- **Frontend App**: `https://your-frontend-url.netlify.app`
+-   **Backend API**: `https://your-backend-url.herokuapp.com`
+-   **Frontend App**: `https://your-frontend-url.netlify.app`
 
 ## 📋 Overview
 
@@ -18,14 +18,14 @@ This application simulates network traffic in a telecommunications network with 
 
 ### ✨ Key Features
 
-- 🔄 **Real-time Packet Simulation** with WebSocket updates
-- 🎯 **Interactive Network Topology** with visual feedback
-- 📊 **Live Statistics Dashboard** showing network metrics
-- 🚦 **Traffic Control Interface** with adjustable generation rates
-- 🎨 **Color-coded Congestion Visualization** (Green/Orange/Red)
-- 🔀 **Shortest Path Routing** using Dijkstra's algorithm
-- 📱 **Responsive Design** for desktop and mobile
-- ☁️ **Cloud-ready Deployment** configuration
+-   🔄 **Real-time Packet Simulation** with WebSocket updates
+-   🎯 **Interactive Network Topology** with visual feedback
+-   📊 **Live Statistics Dashboard** showing network metrics
+-   🚦 **Traffic Control Interface** with adjustable generation rates
+-   🎨 **Color-coded Congestion Visualization** (Green/Orange/Red)
+-   🔀 **Shortest Path Routing** using Dijkstra's algorithm
+-   📱 **Responsive Design** for desktop and mobile
+-   ☁️ **Cloud-ready Deployment** configuration
 
 ## 🏗️ Architecture
 
@@ -54,12 +54,14 @@ The simulator uses a predefined 5-node network topology:
 ```
 
 **Link Capacities (packets/second):**
-- A-B: 100 pps | A-C: 80 pps | B-D: 70 pps
-- C-D: 90 pps | C-E: 110 pps | D-E: 60 pps
+
+-   A-B: 100 pps | A-C: 80 pps | B-D: 70 pps
+-   C-D: 90 pps | C-E: 110 pps | D-E: 60 pps
 
 ## 🚀 Quick Start
 
 ### Option 1: Automated Setup (Windows)
+
 ```bash
 # Clone the repository
 git clone https://github.com/your-username/network-traffic-simulator.git
@@ -73,11 +75,12 @@ start-application.bat
 ```
 
 ### Option 2: Manual Setup
+
 ```bash
 # Install backend dependencies
 cd backend && npm install
 
-# Install frontend dependencies  
+# Install frontend dependencies
 cd ../frontend && npm install
 
 # Start backend (Terminal 1)
@@ -88,28 +91,33 @@ cd frontend && npm start
 ```
 
 ### 🌐 Access the Application
-- **Frontend**: http://localhost:3000
-- **Backend API**: http://localhost:3001
+
+-   **Frontend**: http://localhost:3000
+-   **Backend API**: http://localhost:3001
 
 ## 🎮 Usage Guide
 
 ### 1. Start Simulation
+
 Click "Start Simulation" to begin packet generation and routing
 
 ### 2. Monitor Network
-- **Green Links**: Low traffic (< 50% capacity)
-- **Orange Links**: Medium traffic (50-80% capacity) 
-- **Red Links**: High traffic (> 80% capacity)
+
+-   **Green Links**: Low traffic (< 50% capacity)
+-   **Orange Links**: Medium traffic (50-80% capacity)
+-   **Red Links**: High traffic (> 80% capacity)
 
 ### 3. Control Traffic
-- Adjust individual node rates using sliders
-- Use predefined patterns (Low/Medium/High Traffic)
-- Observe real-time queue changes
+
+-   Adjust individual node rates using sliders
+-   Use predefined patterns (Low/Medium/High Traffic)
+-   Observe real-time queue changes
 
 ### 4. Analyze Performance
-- Monitor node queue sizes
-- Track link utilization percentages
-- Watch network health indicator
+
+-   Monitor node queue sizes
+-   Track link utilization percentages
+-   Watch network health indicator
 
 The frontend will run on `http://localhost:3000`
 
@@ -124,31 +132,35 @@ The frontend will run on `http://localhost:3000`
 
 ## API Endpoints
 
-- `GET /api/status` - Check API status
-- `GET /api/network` - Get current network state
-- `POST /api/start` - Start simulation
-- `POST /api/pause` - Pause simulation
-- `POST /api/reset` - Reset simulation
-- `POST /api/traffic-rates` - Update traffic generation rates
+-   `GET /api/status` - Check API status
+-   `GET /api/network` - Get current network state
+-   `POST /api/start` - Start simulation
+-   `POST /api/pause` - Pause simulation
+-   `POST /api/reset` - Reset simulation
+-   `POST /api/traffic-rates` - Update traffic generation rates
 
 ## Algorithm Details
 
 ### Packet Generation
-- Each node generates packets based on its traffic generation rate
-- Packets are assigned random destinations (excluding source)
-- Generation occurs every simulation step (1 second intervals)
+
+-   Each node generates packets based on its traffic generation rate
+-   Packets are assigned random destinations (excluding source)
+-   Generation occurs every simulation step (1 second intervals)
 
 ### Routing Algorithm
-- Uses Dijkstra's shortest path algorithm
-- Routes packets from source to destination via optimal path
-- Considers network topology but not current congestion for path selection
+
+-   Uses Dijkstra's shortest path algorithm
+-   Routes packets from source to destination via optimal path
+-   Considers network topology but not current congestion for path selection
 
 ### Congestion Control
-- Links have maximum capacity (packets per second)
-- Packets are queued at nodes when downstream links are at capacity
-- Queue sizes are tracked and displayed in real-time
+
+-   Links have maximum capacity (packets per second)
+-   Packets are queued at nodes when downstream links are at capacity
+-   Queue sizes are tracked and displayed in real-time
 
 ### Simulation Loop
+
 1. Generate new packets at each node
 2. Process queued packets at each node
 3. Check link capacities before forwarding
@@ -158,11 +170,13 @@ The frontend will run on `http://localhost:3000`
 ## Deployment
 
 ### Backend Deployment (Heroku)
+
 1. Create a Heroku app
 2. Set environment variables if needed
 3. Deploy using Git or GitHub integration
 
 ### Frontend Deployment (Netlify/Vercel)
+
 1. Build the React app: `npm run build`
 2. Deploy the `build` folder to your preferred platform
 3. Update the API_BASE URL in App.js to point to your deployed backend
@@ -170,31 +184,34 @@ The frontend will run on `http://localhost:3000`
 ## Configuration
 
 ### Traffic Patterns
+
 The simulator includes predefined traffic patterns:
-- **Low Traffic**: 10-25 pps per node
-- **Medium Traffic**: 20-60 pps per node  
-- **High Traffic**: 60-90 pps per node
+
+-   **Low Traffic**: 10-25 pps per node
+-   **Medium Traffic**: 20-60 pps per node
+-   **High Traffic**: 60-90 pps per node
 
 ### Link Utilization Colors
-- **Green**: < 50% utilization
-- **Orange**: 50-80% utilization
-- **Red**: > 80% utilization
+
+-   **Green**: < 50% utilization
+-   **Orange**: 50-80% utilization
+-   **Red**: > 80% utilization
 
 ## Performance Considerations
 
-- Simulation runs at 1-second intervals to balance real-time feel with performance
-- Packet processing is limited to 10 packets per node per step to prevent overwhelming
-- WebSocket updates are sent only when network state changes
-- In-memory storage keeps the application lightweight
+-   Simulation runs at 1-second intervals to balance real-time feel with performance
+-   Packet processing is limited to 10 packets per node per step to prevent overwhelming
+-   WebSocket updates are sent only when network state changes
+-   In-memory storage keeps the application lightweight
 
 ## Future Enhancements
 
-- Dynamic routing based on current link congestion
-- More sophisticated queuing algorithms (priority queues, etc.)
-- Historical data tracking and analytics
-- Support for larger network topologies
-- Advanced traffic patterns and scheduling
-- Network failure simulation
+-   Dynamic routing based on current link congestion
+-   More sophisticated queuing algorithms (priority queues, etc.)
+-   Historical data tracking and analytics
+-   Support for larger network topologies
+-   Advanced traffic patterns and scheduling
+-   Network failure simulation
 
 ## Contributing
 
