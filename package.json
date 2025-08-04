@@ -1,0 +1,26 @@
+{
+    "name": "network-traffic-simulator",
+    "version": "1.0.0",
+    "description": "A real-time network traffic simulator for telecommunications networks",
+    "main": "backend/server.js",
+    "scripts": {
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "server": "cd backend && npm start",
+        "client": "cd frontend && npm start",
+        "build": "cd frontend && npm run build",
+        "install-deps": "cd backend && npm install && cd ../frontend && npm install",
+        "heroku-postbuild": "cd backend && npm install && cd ../frontend && npm install && npm run build"
+    },
+    "keywords": [
+        "network",
+        "simulator",
+        "telecommunications",
+        "traffic",
+        "real-time"
+    ],
+    "author": "DigiPlus IT Assignment",
+    "license": "MIT",
+    "devDependencies": {
+        "concurrently": "^7.6.0"
+    }
+}
