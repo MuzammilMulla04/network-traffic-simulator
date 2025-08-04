@@ -64,7 +64,7 @@ The simulator uses a predefined 5-node network topology:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/network-traffic-simulator.git
+git clone https://github.com/MuzammilMulla04/network-traffic-simulator.git
 cd network-traffic-simulator
 
 # Run automated setup
